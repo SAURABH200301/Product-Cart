@@ -1,0 +1,746 @@
+{
+	"info": {
+		"_postman_id": "1375255a-f20e-4fd9-bb68-d69b39d0b0f7",
+		"name": "E-Commerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21421227"
+	},
+	"item": [
+		{
+			"name": "Auth/User",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"saurabh\",\r\n    \"email\":\"saurabh@wdsad.com\",\r\n    \"password\":\"Test1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/auth/signup",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllUsers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJhYnhjQHdkc2FkLmNvbSIsImlhdCI6MTc2MjE5MTE1MywiZXhwIjoxNzYyMTk0NzUzfQ.bXH_uUdn1RMhjFcyVXtwGFSXePr9fVR48n7nxTnajlA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"saurabh\",\r\n    \"email\":\"abc@dsa.com\",\r\n    \"password\":\"Test1234\"\r\n}"
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/auth/all?",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"all"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJhYnhjQHdkc2FkLmNvbSIsImlhdCI6MTc2MjE5MTE1MywiZXhwIjoxNzYyMTk0NzUzfQ.bXH_uUdn1RMhjFcyVXtwGFSXePr9fVR48n7nxTnajlA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"saurabh sharma\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/auth/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUserByID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJhYnhjQHdkc2FkLmNvbSIsImlhdCI6MTc2MjE5MTE1MywiZXhwIjoxNzYyMTk0NzUzfQ.bXH_uUdn1RMhjFcyVXtwGFSXePr9fVR48n7nxTnajlA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"saurabh\",\r\n    \"email\":\"abc@dsa.com\",\r\n    \"password\":\"Test1234\"\r\n}"
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/auth/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteUserById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJhYnhjQHdkc2FkLmNvbSIsImlhdCI6MTc2MjE5MTE1MywiZXhwIjoxNzYyMTk0NzUzfQ.bXH_uUdn1RMhjFcyVXtwGFSXePr9fVR48n7nxTnajlA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/auth/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJhYnhjQHdkc2FkLmNvbSIsImlhdCI6MTc2MjE5MTE1MywiZXhwIjoxNzYyMTk0NzUzfQ.bXH_uUdn1RMhjFcyVXtwGFSXePr9fVR48n7nxTnajlA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"saurabh@gmail.com\",\r\n    \"password\":\"Test1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/auth/login",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Create Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJzYXVyYWJoQGdtYWlsLmNvbSIsImlhdCI6MTc2MjIzMzIyOCwiZXhwIjoxNzYyMjM2ODI4fQ.Vedcxvi1Yrvy7xyfkKiVxVj3qOllhosW7kIzEyNkDYc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"category 1\",\r\n    \"description\":\"sdafsdadaf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/category",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get All category",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJzYXVyYWJoQGdtYWlsLmNvbSIsImlhdCI6MTc2MjQ0MTM5OCwiZXhwIjoxNzYyNDQ0OTk4fQ.ZeuECJlwnh6uRGjOpk3vgyuXqpK0H0apXPUuAE7nQwo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"category 1\",\r\n    \"description\":\"sdafsdadaf\"\r\n}"
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/category/all",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"category",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Category ByID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJzYXVyYWJoQGdtYWlsLmNvbSIsImlhdCI6MTc2MjQwNzc3MywiZXhwIjoxNzYyNDExMzczfQ.G-XcijNmFVCdLadZtasU_8qdhziZy_KUkZC6YmaI464",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"category 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/category/8d407adf-318b-4eeb-b8ff-4d0a4eb0d911",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"category",
+								"8d407adf-318b-4eeb-b8ff-4d0a4eb0d911"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Category By ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJzYXVyYWJoQGdtYWlsLmNvbSIsImlhdCI6MTc2MjIzMzIyOCwiZXhwIjoxNzYyMjM2ODI4fQ.Vedcxvi1Yrvy7xyfkKiVxVj3qOllhosW7kIzEyNkDYc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"category 1\",\r\n    \"description\":\"sdafsdadaf\"\r\n}"
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/category/8d407adf-318b-4eeb-b8ff-4d0a4eb0d911",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"category",
+								"8d407adf-318b-4eeb-b8ff-4d0a4eb0d911"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete CategoryByID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJzYXVyYWJoQGdtYWlsLmNvbSIsImlhdCI6MTc2MjIzMzIyOCwiZXhwIjoxNzYyMjM2ODI4fQ.Vedcxvi1Yrvy7xyfkKiVxVj3qOllhosW7kIzEyNkDYc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"category 1\",\r\n    \"description\":\"sdafsdadaf\"\r\n}"
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/category/8d407adf-318b-4eeb-b8ff-4d0a4eb0d911",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"category",
+								"8d407adf-318b-4eeb-b8ff-4d0a4eb0d911"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Create Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJzYXVyYWJoQGdtYWlsLmNvbSIsImlhdCI6MTc2MjQyMzMzNiwiZXhwIjoxNzYyNDI2OTM2fQ.zqAY08IUY5LbgopfBUQ_wr7VfU36tYYqjZypAqzYrlc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"product 1\",\r\n    \"image\":\"image 2\",\r\n    \"price\":\"12\",\r\n    \"categoryId\":\"8d407adf-318b-4eeb-b8ff-4d0a4eb0d911\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/product",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "download All Product csv/xlsx",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJzYXVyYWJoQGdtYWlsLmNvbSIsImlhdCI6MTc2MjQyMzMzNiwiZXhwIjoxNzYyNDI2OTM2fQ.zqAY08IUY5LbgopfBUQ_wr7VfU36tYYqjZypAqzYrlc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/product/download/csv",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"download",
+								"csv"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllProduct with pagination and searching",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJzYXVyYWJoQGdtYWlsLmNvbSIsImlhdCI6MTc2MjQyNjk4MiwiZXhwIjoxNzYyNDMwNTgyfQ.NzKOuAjRosPwJxAa5jZU_3cFqI8B2KpTVZ_HzFgGUS8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/product/all?page=1&limit=20&filter={\"categoryId\":\"8d407adf-318b-4eeb-b8ff-4d0a4eb0d911\"}&order=ASC&search=\"1\"",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"all"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "20"
+								},
+								{
+									"key": "filter",
+									"value": "{\"categoryId\":\"8d407adf-318b-4eeb-b8ff-4d0a4eb0d911\"}"
+								},
+								{
+									"key": "order",
+									"value": "ASC"
+								},
+								{
+									"key": "search",
+									"value": "\"1\""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product By ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJzYXVyYWJoQGdtYWlsLmNvbSIsImlhdCI6MTc2MjQyNjk4MiwiZXhwIjoxNzYyNDMwNTgyfQ.NzKOuAjRosPwJxAa5jZU_3cFqI8B2KpTVZ_HzFgGUS8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/product/ee7765eb-f9ef-4db9-89c0-63bdfa4fd24b",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"ee7765eb-f9ef-4db9-89c0-63bdfa4fd24b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update product",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"updated name\",\r\n    \"image\":\"updated image name\",\r\n    \"price\":\"updated price\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/product/ee7765eb-f9ef-4db9-89c0-63bdfa4fd24b",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"ee7765eb-f9ef-4db9-89c0-63bdfa4fd24b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete by Id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/product/ee7765eb-f9ef-4db9-89c0-63bdfa4fd24b",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"ee7765eb-f9ef-4db9-89c0-63bdfa4fd24b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bulk Upload",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"products\":[\r\n        {\r\n            \"name\":\"product 1\",\r\n            \"image\":\"image 1\",\r\n            \"price\":\"12\",\r\n            \"categoryId\":\"ee7765eb-f9ef-4db9-89c0-63bdfa4fd24b\"\r\n        },\r\n        {\r\n            \"name\":\"product 2\",\r\n            \"image\":\"image 2\",\r\n            \"price\":\"12\",\r\n            \"categoryId\":\"ee7765eb-f9ef-4db9-89c0-63bdfa4fd24b\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/product/bulk-upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"bulk-upload"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Image",
+			"item": [
+				{
+					"name": "Get Image by filename",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/image/1762442895604-605979052.jpg",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"image",
+								"1762442895604-605979052.jpg"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload Image",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/image/upload",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"image",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete File by Name",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/image/fileName",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"image",
+								"fileName"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "upload image to docker"
+		}
+	]
+}
